@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasil Voting PMR</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="cekLoginAdmin()">
+
+<nav class="navbar navbar-dark">
+
+    <div class="container">
+
+        <span class="navbar-brand fw-bold">
+            <i class="bi bi-speedometer2"></i>
+            DASHBOARD ADMIN PMR
+        </span>
+
+        <button
+            onclick="logoutAdmin()"
+            class="btn btn-light btn-sm"
+        >
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <div class="admin-icon">
+            <i class="bi bi-bar-chart-fill"></i>
+        </div>
+
+        <h1>Hasil Voting</h1>
+
+        <p class="text-muted">
+            Rekapitulasi hasil pemilihan Ketua & Wakil PMR
+        </p>
+
+    </div>
+
+
+    <!-- TOTAL SUARA -->
+
+    <div class="total-vote text-center mb-4">
+
+        <h5>
+            Total Suara Masuk
+        </h5>
+
+        <h1 id="totalSuara">
+            0
+        </h1>
+
+        <p class="mb-0">
+            Suara
+        </p>
+
+    </div>
+
+
+    <!-- HASIL PASLON -->
+
+    <div class="row g-4 mb-5">
+
+        <!-- PASLON 01 -->
+
+        <div class="col-md-4">
+
+            <div class="result-card">
+
+                <div class="nomor-paslon">
+                    01
+                </div>
+
+                <h4>
+                    Andi Pratama
+                </h4>
+
+                <p>
+                    Ketua
+                </p>
+
+                <h5>
+                    Budi Santoso
+                </h5>
+
+                <p>
+                    Wakil Ketua
+                </p>
+
+                <div class="progress mt-3">
+
+                    <div
+                        id="progress1"
+                        class="progress-bar bg-danger"
+                        style="width: 0%"
+                    >
+                        0%
+                    </div>
+
+                </div>
+
+                <h3
+                    id="suara1"
+                    class="mt-3"
+                >
+                    0 suara
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- PASLON 02 -->
+
+        <div class="col-md-4">
+
+            <div class="result-card">
+
+                <div class="nomor-paslon">
+                    02
+                </div>
+
+                <h4>
+                    Citra Maharani
+                </h4>
+
+                <p>
+                    Ketua
+                </p>
+
+                <h5>
+                    Dimas Saputra
+                </h5>
+
+                <p>
+                    Wakil Ketua
+                </p>
+
+                <div class="progress mt-3">
+
+                    <div
+                        id="progress2"
+                        class="progress-bar bg-danger"
+                        style="width: 0%"
+                    >
+                        0%
+                    </div>
+
+                </div>
+
+                <h3
+                    id="suara2"
+                    class="mt-3"
+                >
+                    0 suara
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- PASLON 03 -->
+
+        <div class="col-md-4">
+
+            <div class="result-card">
+
+                <div class="nomor-paslon">
+                    03
+                </div>
+
+                <h4>
+                    Eko Firmansyah
+                </h4>
+
+                <p>
+                    Ketua
+                </p>
+
+                <h5>
+                    Fajar Ramadhan
+                </h5>
+
+                <p>
+                    Wakil Ketua
+                </p>
+
+                <div class="progress mt-3">
+
+                    <div
+                        id="progress3"
+                        class="progress-bar bg-danger"
+                        style="width: 0%"
+                    >
+                        0%
+                    </div>
+
+                </div>
+
+                <h3
+                    id="suara3"
+                    class="mt-3"
+                >
+                    0 suara
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DATA PEMILIH -->
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body">
+
+            <h4 class="mb-4">
+                <i class="bi bi-people-fill"></i>
+                Data Pemilih
+            </h4>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-danger">
+
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Paslon</th>
+                            <th>Waktu</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelPemilih">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="text-center mt-4">
+
+        <button
+            onclick="hapusData()"
+            class="btn btn-outline-danger"
+        >
+            <i class="bi bi-trash-fill"></i>
+            Reset Semua Data
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-1">
+            <i class="bi bi-heart-pulse-fill"></i>
+            Voting PMR SMKN 2 Kota Mojokerto
+        </p>
+
+        <small>
+            © 2026 Dibuat oleh <strong>Yoga</strong>
+        </small>
+    </div>
+</footer>
+
+</html>

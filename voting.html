@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voting Ketua & Wakil PMR</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <span class="navbar-brand fw-bold">
+            <i class="bi bi-heart-pulse-fill"></i>
+            VOTING PMR
+        </span>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="voting-container">
+
+        <div class="text-center mb-4">
+            <div class="admin-icon">
+                <i class="bi bi-person-check-fill"></i>
+            </div>
+
+            <h2>Form Pemilihan</h2>
+            <p class="text-muted">
+                Isi nama dan pilih salah satu pasangan calon.
+            </p>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label fw-bold">
+                Nama Lengkap
+            </label>
+
+            <input
+                type="text"
+                id="namaPemilih"
+                class="form-control form-control-lg"
+                placeholder="Masukkan nama lengkap"
+            >
+        </div>
+
+        <h5 class="fw-bold mb-3">
+            Pilih Pasangan Calon
+        </h5>
+
+        <!-- PASLON 01 -->
+        <label class="candidate-card">
+
+            <input
+                type="radio"
+                name="paslon"
+                value="1"
+            >
+
+            <div class="candidate-content">
+
+                <div class="nomor-paslon">
+                    01
+                </div>
+
+                <div>
+                    <h5>Andi Pratama</h5>
+                    <p>
+                        <span>Ketua</span>
+                    </p>
+
+                    <h5>Budi Santoso</h5>
+                    <p>
+                        <span>Wakil Ketua</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </label>
+
+
+        <!-- PASLON 02 -->
+        <label class="candidate-card">
+
+            <input
+                type="radio"
+                name="paslon"
+                value="2"
+            >
+
+            <div class="candidate-content">
+
+                <div class="nomor-paslon">
+                    02
+                </div>
+
+                <div>
+                    <h5>Citra Maharani</h5>
+                    <p>
+                        <span>Ketua</span>
+                    </p>
+
+                    <h5>Dimas Saputra</h5>
+                    <p>
+                        <span>Wakil Ketua</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </label>
+
+
+        <!-- PASLON 03 -->
+        <label class="candidate-card">
+
+            <input
+                type="radio"
+                name="paslon"
+                value="3"
+            >
+
+            <div class="candidate-content">
+
+                <div class="nomor-paslon">
+                    03
+                </div>
+
+                <div>
+                    <h5>Eko Firmansyah</h5>
+                    <p>
+                        <span>Ketua</span>
+                    </p>
+
+                    <h5>Fajar Ramadhan</h5>
+                    <p>
+                        <span>Wakil Ketua</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </label>
+
+
+        <button
+            type="button"
+            onclick="kirimVoting()"
+            class="btn btn-danger btn-lg w-100 mt-3"
+        >
+            <i class="bi bi-send-fill"></i>
+            Kirim Suara
+        </button>
+
+        <a href="index.html" class="btn btn-outline-secondary w-100 mt-2">
+            Kembali
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p class="mb-1">
+            <i class="bi bi-heart-pulse-fill"></i>
+            Voting PMR SMKN 2 Kota Mojokerto
+        </p>
+
+        <small>
+            © 2026 Dibuat oleh <strong>Yoga</strong>
+        </small>
+    </div>
+</footer>
+
+
+</html>
